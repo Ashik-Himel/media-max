@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Tilt+Neon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Tilt+Neon&display=swap");
 /* Animations */
 @keyframes nav-animation {
   from {
@@ -19,7 +19,7 @@
 
   --body-font: "Poppins", sans-serif;
   --title-font: "Poppins", sans-serif;
-  --hero-title-font: 'Tilt Neon', cursive;
+  --hero-title-font: "Tilt Neon", cursive;
 
   --body-size: 1rem;
   --hero-title-size: 2.5rem;
@@ -66,6 +66,7 @@ h2 {
   font-family: var(--title-font);
   font-size: var(--title-size);
   font-weight: var(--title-weight);
+  text-align: center;
   margin-bottom: 1rem;
 }
 h3 {
@@ -228,6 +229,27 @@ button {
   display: none;
 }
 
+/* Hero Section */
+.hero-section .pre-title {
+  margin-bottom: 0.5rem;
+}
+.hero-section .pre-title .line {
+  display: inline-block;
+  width: 60px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  bottom: 3px;
+  margin-right: 5px;
+}
+.hero-section .pre-title .hello {
+  display: inline-block;
+  padding: 3px 25px;
+  background-color: white;
+  color: #0b1926;
+  border-radius: 4px;
+  font-weight: 500;
+}
 
 /* Media Queries */
 @media screen and (max-width: 650px) {
