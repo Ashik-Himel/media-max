@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Tilt+Neon&display=swap');
 /* Animations */
 @keyframes nav-animation {
   from {
@@ -8,17 +9,17 @@
   }
 }
 /* Presets */
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;600;700&display=swap");
 :root {
   --primary-color: #01f38d;
   --primary-color-alt: #003128;
   --text-color: #d1ffeb;
   --title-color: #e8fff5;
   --bg-color: linear-gradient(114.29deg, #0b1926 -15.11%, #020606 106.05%);
+  --menu-border: #006400;
 
   --body-font: "Poppins", sans-serif;
   --title-font: "Poppins", sans-serif;
-  --hero-title-font: "Lobster", cursive;
+  --hero-title-font: 'Tilt Neon', cursive;
 
   --body-size: 1rem;
   --hero-title-size: 2.5rem;
@@ -26,7 +27,6 @@
   --sub-title-size: 1.5rem;
 
   --body-weight: 400;
-  --hero-title-weight: 700;
   --title-weight: 600;
   --sub-title-weight: 500;
   --link-weight: 500;
@@ -59,7 +59,6 @@ h1 {
   color: var(--title-color);
   font-family: var(--hero-title-font);
   font-size: var(--hero-title-size);
-  font-weight: var(--hero-title-weight);
   margin-bottom: 0.5rem;
 }
 h2 {
@@ -173,6 +172,7 @@ button {
 }
 .btn-alt:hover {
   background-color: var(--primary-color);
+  border-color: var(--primary-color);
   color: white;
 }
 .colored-text {
@@ -183,6 +183,8 @@ button {
 .header-section {
   padding: 1rem 0;
   border-bottom: 2px solid var(--primary-color);
+  background: var(--bg-color);
+  z-index: 10;
   position: sticky;
   top: 0;
   left: 0;
@@ -207,21 +209,32 @@ button {
   color: var(--primary-color);
   text-transform: uppercase;
 }
+.header-section .topper-nav {
+  display: none;
+}
 .header-section nav ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-.header-section nav ul a.active {
+.header-section nav ul li.active a {
   color: var(--primary-color);
 }
 .header-section .fa-bars-staggered,
 .header-section .fa-xmark {
   font-size: 2rem;
   color: var(--primary-color);
+  cursor: pointer;
   display: none;
 }
 
+
+/* Media Queries */
+@media screen and (max-width: 650px) {
+  .flex {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 830px) {
   /* Header Section */
   .header-section .fa-bars-staggered,
@@ -236,19 +249,47 @@ button {
     background-color: var(--primary-color-alt);
     width: 320px;
     max-width: 80%;
-    border-left: 4px solid var(--primary-color);
+    border-left: 3px solid var(--menu-border);
     transition: right 0.3s ease;
   }
   .header-section nav.active {
     right: 0;
   }
+  .header-section .topper-nav {
+    display: block;
+    padding: 3rem 2rem;
+  }
+  .header-section .topper-nav > img {
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+  .header-section .topper-nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .header-section .topper-nav-icons img {
+    width: 45px;
+  }
   .header-section nav ul {
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    gap: 0;
+  }
+  .header-section nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
   }
   .header-section nav ul a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .header-section nav ul li.active {
+    background-color: var(--primary-color);
+  }
+  .header-section nav ul li.active a {
+    color: white;
   }
   .header-section nav .fa-xmark {
     position: absolute;
@@ -276,12 +317,6 @@ button {
     animation-delay: 0.25s;
   }
 }
-/* @media screen and (min-width: 576px) {
-  .container {width: 540px;}
-}
-@media screen and (min-width: 768px) {
-  .container {width: 730px;}
-} */
 @media screen and (min-width: 992px) {
   .container {
     width: 960px;
