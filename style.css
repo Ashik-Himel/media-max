@@ -220,7 +220,7 @@ button {
   align-items: center;
   gap: 1.5rem;
 }
-.header-section nav ul li.active a {
+.header-section nav ul a.active {
   color: var(--primary-color);
 }
 .header-section .fa-bars-staggered,
@@ -366,13 +366,15 @@ button {
   font-weight: 500;
 }
 
+
 /* Scroll To Top */
 .scroll-to-top {
+  display: block;
   padding: 5px;
   border-radius: 5px;
   background-color: var(--primary-color-alt);
   position: fixed;
-  bottom: -100%;
+  bottom: -100px;
   right: 2rem;
   border: 2px solid var(--primary-color);
   transition: bottom 0.5s ease;
@@ -454,6 +456,9 @@ button {
     gap: 0;
   }
   .header-section nav ul li {
+    width: 100%;
+  }
+  .header-section nav ul li a {
     display: block;
     width: calc(100% - 20px);
     text-align: center;
@@ -465,10 +470,10 @@ button {
   .header-section nav ul a {
     font-size: 1.1rem;
   }
-  .header-section nav ul li.active {
+  .header-section nav ul a.active {
     background-color: var(--primary-color);
   }
-  .header-section nav ul li.active a {
+  .header-section nav ul a.active {
     color: var(--btn-color);
   }
   .header-section nav .fa-xmark {
@@ -477,7 +482,7 @@ button {
     top: 1.5rem;
   }
   /* Navigation Animation */
-  .header-section nav.active li {
+  .header-section nav.active li a {
     position: relative;
     animation: nav-animation 0.5s ease-in backwards;
   }

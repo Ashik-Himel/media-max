@@ -36,36 +36,6 @@ function scrollToTop() {
 window.addEventListener("scroll", scrollToTop);
 
 function navScrollLinkActive() {
-  const scrollLength = window.scrollY;
-  const heroSection = document.querySelector(".hero-section");
-  const aboutSection = document.querySelector(".about-section");
-  const servicesSection = document.querySelector(".services-section");
-  const teamSection = document.querySelector(".team-section");
-  const faqsSection = document.querySelector(".faqs-section");
-  const contactSection = document.querySelector(".contact-section");
-
-  const homeLink = document.querySelector(
-    ".header-section nav .home-link-list"
-  );
-  const aboutLink = document.querySelector(
-    ".header-section nav .about-link-list"
-  );
-  const servicesLink = document.querySelector(
-    ".header-section nav .services-link-list"
-  );
-  const teamLink = document.querySelector(
-    ".header-section nav .team-link-list"
-  );
-  const faqsLink = document.querySelector(
-    ".header-section nav .faqs-link-list"
-  );
-  const contactLink = document.querySelector(
-    ".header-section nav .contact-link-list"
-  );
-
-  if (scrollLength <= heroSection.offsetHeight) {
-    homeLink.classList.add("active");
-  } else {
-    homeLink.classList.remove("active");
-  }
+  
 }
+// window.addEventListener("scroll", navScrollLinkActive);
