@@ -26,24 +26,24 @@
           <div class="topper-nav">
             <img src="images/media-max.png" alt="Site Logo" />
             <div class="topper-nav-icons">
-              <a href="https://www.facebook.com/"
+              <a href="https://www.facebook.com/" target="_blank"
                 ><img src="images/facebook.png" alt="Facebook Icon"
               /></a>
-              <a href="mailto:support@mediamax.com"
+              <a href="mailto:support@mediamax.com" target="_blank"
                 ><img src="images/gmail.png" alt="Gmail Icon"
               /></a>
-              <a href="https://goo.gl/maps/86rJE74TTRbxXd5i7"
+              <a href="https://goo.gl/maps/86rJE74TTRbxXd5i7" target="_blank"
                 ><img src="images/google-maps.png" alt="Google Maps Icon"
               /></a>
             </div>
           </div>
           <ul>
-            <li class="active"><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li class="last-menu-link"><a href="#contact">Contact Us</a></li>
+            <li class="home-link-list"><a href="#home">Home</a></li>
+            <li class="about-link-list"><a href="#about">About Us</a></li>
+            <li class="services-link-list"><a href="#services">Services</a></li>
+            <li class="team-link-list"><a href="#team">Team</a></li>
+            <li class="faqs-link-list"><a href="#faqs">FAQs</a></li>
+            <li class="contact-link-list"><a href="#contact">Contact Us</a></li>
             <i class="fa-solid fa-xmark"></i>
           </ul>
         </nav>
@@ -118,7 +118,9 @@
               We provide airtime packages from banglalink to our clients and
               they sell those to customers.
             </p>
-            <a href="#contact" class="btn">Contact Us</a>
+            <a href="#contact" class="btn"
+              >Contact Us <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
           <div class="card">
             <i class="fa-solid fa-rug"></i>
@@ -127,7 +129,9 @@
               We provide scratch card from banglalink to our clients and they
               sell those to customers.
             </p>
-            <a href="#contact" class="btn">Contact Us</a>
+            <a href="#contact" class="btn"
+              >Contact Us <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
           <div class="card">
             <i class="fa-solid fa-box-open"></i>
@@ -136,7 +140,9 @@
               We provide special bundles from banglalink to our clients and they
               sell those to customers.
             </p>
-            <a href="#contact" class="btn">Contact Us</a>
+            <a href="#contact" class="btn"
+              >Contact Us <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -263,25 +269,53 @@
 
     <!-- Footer Section -->
     <footer class="footer-section">
-      <div class="main-footer container">
-        <img src="images/media-max.png" alt="Site Logo" />
-        <p>
-          Kitab Ali Plaza (3rd floor), Mawna Chowrasta, Sreepur, Gazipur-1740,
-          Dhaka, Bangladesh.
-        </p>
-        <p>support@mediamax.com</p>
+      <div class="main-footer">
+        <div class="container flex">
+          <div class="left-div">
+            <img src="images/media-max.png" alt="Site Logo" />
+            <p>
+              Kitab Ali Plaza (3rd floor), Mawna Chowrasta, Sreepur,
+              Gazipur-1740, Dhaka, Bangladesh.
+            </p>
+            <span class="footer-line"></span>
+          </div>
+          <div class="right-div">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+              </li>
+              <li>
+                <a href="mailto:support@mediamax.com" target="_blank">Email</a>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/86rJE74TTRbxXd5i7" target="_blank"
+                  >Google Maps</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="bottom-footer">
         <div class="container">
           <span
-            >Copyright&copy;<span id="current-year"></span>. All rights reserved
-            by Media Max. Developed by
-            <a href="https://www.facebook.com/ashikujjaman.himel">Ashik-Himel</a
+            >Copyright&copy;<span id="current-year"></span> Media Max. All
+            rights reserved. Developed by
+            <a
+              href="https://www.facebook.com/ashikujjaman.himel"
+              target="_blank"
+              >Ashik-Himel</a
             >.</span
           >
         </div>
       </div>
     </footer>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top">
+      <img src="images/scroll-top.gif" alt="Scroll To Top Icon" />
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
