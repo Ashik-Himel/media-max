@@ -161,7 +161,7 @@ button {
 .button {
   display: inline-block;
   background-color: var(--primary-color);
-  color: var(--button-color);
+  color: var(--button-color) !important;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border: 2px solid var(--primary-color);
@@ -171,15 +171,16 @@ button {
 .button:hover {
   background-color: var(--primary-color-alt);
   border-color: var(--primary-color-alt);
+  color: white !important;
 }
 .button-alt {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 .button-alt:hover {
   background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: white;
+  border-color: var(--primary-color) !important;
+  color: var(--button-color) !important;
 }
 .colored-text {
   color: var(--primary-color);
@@ -348,6 +349,41 @@ button {
 }
 
 /* Team Section */
+.team-section h2 {
+  margin-bottom: 2rem;
+}
+.team-section .team-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--primary-color-alt);
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.team-section .team-banner > * {
+  width: 50%;
+}
+.team-section .team-banner > img {
+  border-radius: 15px;
+}
+.team-section .team-banner h3 {
+  color: var(--primary-color);
+  margin-bottom: 0rem;
+}
+.team-section .team-banner span {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.team-section .team-banner .social-icon-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.team-section .team-banner .social-icon-box img {
+  max-width: 40px;
+}
 .team-section .card-box-flex .card-box {
   padding: 0;
 }
@@ -421,7 +457,7 @@ button {
   padding: 2rem 0;
 }
 .footer-section .bottom-footer a {
-  color: var(--button-color);
+  color: var(--button-color) !important;
   font-weight: 500;
 }
 
@@ -453,6 +489,15 @@ button {
     flex-direction: column;
   }
   .flex-box > * {
+    width: 100%;
+  }
+  .about-section .flex-box {
+    flex-direction: column-reverse;
+  }
+  .team-section .team-banner {
+    flex-direction: column;
+  }
+  .team-section .team-banner > * {
     width: 100%;
   }
   .contact-section .input-flex {
