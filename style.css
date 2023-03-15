@@ -231,6 +231,8 @@ button {
 .header-section nav ul a.active {
   background-color: transparent !important;
   color: var(--primary-color) !important;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .header-section .fa-bars-staggered,
 .header-section .fa-xmark {
@@ -381,11 +383,40 @@ button {
   align-items: center;
   gap: 1.5rem;
 }
+.team-section .card-box-img {
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
 .team-section .team-banner .social-icon-box img {
   max-width: 40px;
 }
 .team-section .card-box-flex .card-box {
   padding: 0;
+}
+.team-section .team-social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  transition: top 0.3s ease;
+}
+.team-section .team-social-icons img {
+  width: 40px;
+}
+.team-section .card-box-flex .card-box:hover .team-social-icons {
+  top: 0;
+}
+.team-section .card-box-flex .card-box:hover .card-box-img > img {
+  filter: brightness(30%);
 }
 .team-section .card-box img {
   max-width: 100%;
