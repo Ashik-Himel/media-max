@@ -326,6 +326,7 @@ button {
   margin-bottom: 1rem;
 }
 .about-short-info-box {
+  max-width: 450px;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
