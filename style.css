@@ -403,6 +403,9 @@ button {
   display: block;
   margin-bottom: 1.5rem;
 }
+.team-section .team-banner p {
+  text-align: justify;
+}
 .team-section .team-banner .social-icon-box {
   display: flex;
   align-items: center;
