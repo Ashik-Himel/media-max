@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees :: Media Max</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header-section">
+      <div class="container-box">
+        <div class="site-logo" onclick="document.location = '/'">
+          <img src="images/favicon.png" alt="Logo" />
+          <span>Media Max</span>
+        </div>
+        <nav>
+          <div class="topper-nav">
+            <img src="images/media-max.png" alt="Site Logo" />
+            <div class="topper-nav-icons">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img src="images/facebook.png" alt="Facebook Icon"
+              /></a>
+              <a href="mailto:support@mediamax.com.bd" target="_blank"
+                ><img src="images/gmail.png" alt="Gmail Icon"
+              /></a>
+              <a href="https://goo.gl/maps/86rJE74TTRbxXd5i7" target="_blank"
+                ><img src="images/google-maps.png" alt="Google Maps Icon"
+              /></a>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <a href="/#home">Home</a>
+            </li>
+            <li>
+              <a href="/#about">About Us</a>
+            </li>
+            <li>
+              <a href="/#services">Services</a>
+            </li>
+            <li>
+              <a href="/#team">Team</a>
+            </li>
+            <li>
+              <a href="/#contact">Contact Us</a>
+            </li>
+            <li><a class="button active" href="#/">Employees</a></li>
+            <i class="fa-solid fa-xmark"></i>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+    </header>
+
+    <!-- Table Section -->
+    <section class="table-section">
+      <div class="container-box">
+        <h2><span class="colored-text">Employee</span> List</h2>
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            name="search-employee"
+            id="search-employee"
+            placeholder="Search"
+          />
+        </div>
+
+        <!-- Data Table -->
+        <div class="table-wrapper">
+          <table id="data-table">
+            <thead id="table-heading">
+              <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Mobile Number</th>
+                <th>DH Name</th>
+                <th>Photo</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr>
+                <td>RSO-01</td>
+                <td>MD Billal Uddin</td>
+                <td><a href="tel:+8801700000000">017XXXXXXXX</a></td>
+                <td>Media Max</td>
+                <td>
+                  <img
+                    class="active"
+                    src="images/md.png"
+                    alt="MD Billal Uddin"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>RSO-02</td>
+                <td>MD Shohidul Islam</td>
+                <td><a href="tel:+8801700000000">017XXXXXXXX</a></td>
+                <td>Media Max</td>
+                <td><img src="images/gm.png" alt="MD Shohidul Islam" /></td>
+              </tr>
+              <tr>
+                <td>RSO-03</td>
+                <td>MD Sarwar Sorkar</td>
+                <td><a href="tel:+8801700000000">017XXXXXXXX</a></td>
+                <td>Media Max</td>
+                <td><img src="images/am.png" alt="MD Sarwar Sorkar" /></td>
+              </tr>
+              <tr>
+                <td>RSO-04</td>
+                <td>MD Arafatul Islam</td>
+                <td><a href="tel:+8801700000000">017XXXXXXXX</a></td>
+                <td>Media Max</td>
+                <td><img src="images/hie.png" alt="MD Arafatul Islam" /></td>
+              </tr>
+              <tr>
+                <td>RSO-05</td>
+                <td>MD Azizul Islam</td>
+                <td><a href="tel:+8801700000000">017XXXXXXXX</a></td>
+                <td>Media Max</td>
+                <td><img src="images/ca.png" alt="MD Azizul Islam" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Fullscreen -->
+    <div class="fs-area">
+      <i class="fa-solid fa-xmark"></i>
+      <img src="" alt="Image Fullscreen" />
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="main-footer">
+        <div class="container-box flex-box">
+          <div class="left-div">
+            <img src="images/media-max.png" alt="Site Logo" />
+            <p>
+              Kitab Ali Plaza (3rd floor), Mawna Chowrasta, Sreepur,
+              Gazipur-1740, Dhaka, Bangladesh.
+            </p>
+            <span class="footer-line"></span>
+          </div>
+          <div class="right-div">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+              </li>
+              <li>
+                <a href="mailto:support@mediamax.com.bd" target="_blank"
+                  >Email</a
+                >
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/86rJE74TTRbxXd5i7" target="_blank"
+                  >Google Maps</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="container-box">
+          <span
+            >Copyright&copy;<span id="current-year"></span> Media Max. All
+            rights reserved. Developed by
+            <a
+              href="https://www.facebook.com/ashikujjaman.himel"
+              target="_blank"
+              >Ashik-Himel</a
+            >.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="employees.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,8 +1,8 @@
+// Nav Menu
 const bar = document.querySelector(".header-section .fa-bars-staggered");
 const cross = document.querySelector(".header-section .fa-xmark");
 const navLink = document.querySelectorAll(".header-section nav a");
 const navMenu = document.querySelector(".header-section nav");
-const currentYear = document.querySelector("#current-year");
 
 bar.addEventListener("click", function () {
   navMenu.classList.add("active");
@@ -16,6 +16,8 @@ navLink.forEach((n) =>
   })
 );
 
+// Current Year for Footer
+const currentYear = document.querySelector("#current-year");
 function currentYearFunc() {
   const d = new Date();
   const d_year = d.getFullYear();
@@ -23,6 +25,7 @@ function currentYearFunc() {
 }
 currentYearFunc();
 
+// Scroll To Top
 function scrollToTop() {
   const scrollTopIcon = document.querySelector(".scroll-to-top");
   const scrollLength = window.scrollY;
