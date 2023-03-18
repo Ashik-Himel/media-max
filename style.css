@@ -591,6 +591,9 @@ button {
   margin-top: 0.5rem;
   text-align: center;
 }
+.table-section #data-table tr {
+  cursor: pointer;
+}
 .table-section #data-table,
 .table-section #data-table th,
 .table-section #data-table td {

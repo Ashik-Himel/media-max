@@ -38,3 +38,29 @@ input.addEventListener("input", function () {
     rows[i].style.display = found ? "" : "none";
   }
 });
+
+// Employee Card
+const tableSection = document.querySelector(".table-section");
+const employeeCardSection = document.querySelector(".employee-card");
+const employeeCardBack = document.querySelector(
+  ".employee-card .fa-chevron-left"
+);
+const employeeImg = document.querySelector("#employee-image");
+const employeeName = document.querySelector("#employee-name");
+const employeeDesignation = document.querySelector("#employee-designation");
+const employeeInfo = document.querySelector("#employee-info");
+const employeeFacebook = document.querySelector("#facebook");
+const employeeGmail = document.querySelector("#gmail");
+const employeeWhatsapp = document.querySelector("#whatsapp");
+const employeePhone = document.querySelector("#phone");
+
+rows.forEach((n) =>
+  n.addEventListener("click", function () {
+    tableSection.classList.remove("active");
+    employeeCardSection.classList.add("active");
+  })
+);
+employeeCardBack.addEventListener("click", function () {
+  employeeCardSection.classList.remove("active");
+  tableSection.classList.add("active");
+});
