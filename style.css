@@ -381,7 +381,7 @@ button {
 .team-section h2 {
   margin-bottom: 2rem;
 }
-.team-section .team-banner {
+.team-banner {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -391,35 +391,35 @@ button {
   max-width: 900px;
   margin: 0 auto;
 }
-.team-section .team-banner > * {
+.team-banner > * {
   width: 50%;
 }
-.team-section .team-banner > img {
+.team-banner > img {
   border-radius: 15px;
 }
-.team-section .team-banner h3 {
+.team-banner h3 {
   color: var(--primary-color);
   margin-bottom: 0rem;
 }
-.team-section .team-banner span {
+.team-banner span {
   display: block;
   margin-bottom: 1.5rem;
 }
-.team-section .team-banner p {
+.team-banner p {
   text-align: justify;
 }
-.team-section .team-banner .social-icon-box {
+.team-banner .social-icon-box {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+.team-banner .social-icon-box img {
+  max-width: 40px;
 }
 .team-section .card-box-img {
   position: relative;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-.team-section .team-banner .social-icon-box img {
-  max-width: 40px;
 }
 .team-section .card-box-flex .card-box {
   padding: 0;
@@ -557,7 +557,7 @@ button {
   align-items: center;
 }
 
-/* Search Section */
+/* Table Section */
 .table-section h2 {
   margin-bottom: 2rem;
 }
@@ -641,6 +641,22 @@ button {
   border-radius: 15px;
 }
 
+/* Employee Card */
+.employee-card .button-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.employee-card .card {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.table-section, .employee-card {
+  display: none;
+}
+.table-section.active, .employee-card.active {
+  display: block;
+}
+
 /* Media Queries */
 @media screen and (max-width: 767px) {
   body {
@@ -658,10 +674,10 @@ button {
   .about-section .flex-box {
     flex-direction: column-reverse;
   }
-  .team-section .team-banner {
+  .team-banner {
     flex-direction: column;
   }
-  .team-section .team-banner > * {
+  .team-banner > * {
     width: 100%;
   }
   .contact-section .input-flex {
