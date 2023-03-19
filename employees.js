@@ -47,6 +47,7 @@ const employeeCardBack = document.querySelector(
 );
 const rowCode = document.querySelectorAll(".row-code");
 const rowName = document.querySelectorAll(".row-name");
+const rowDHName = document.querySelectorAll(".row-dh-name");
 const employeeImg = document.querySelector("#employee-image");
 const employeeName = document.querySelector("#employee-name");
 const employeeDesignation = document.querySelector("#employee-designation");
@@ -55,6 +56,14 @@ const employeePhone = document.querySelector("#employee-phone");
 function cardOpen() {
   tableSection.classList.remove("active");
   employeeCardSection.classList.add("active");
+  window.scrollTo(0, 0);
+  employeeImg.src = this.closest("tr").querySelector(".row-img").src;
+  employeeName.innerHTML =
+    this.closest("tr").querySelector(".row-name").innerHTML;
+  employeeDesignation.innerHTML =
+    "<span style='font-weight: 500; display: inline; font-size: 1.1rem'>Dist. House : </span>" +
+    this.closest("tr").querySelector(".row-dh-name").innerHTML;
+  employeePhone.href = this.closest("tr").querySelector(".row-phone").href;
 }
 function cardClose() {
   employeeCardSection.classList.remove("active");
@@ -62,4 +71,5 @@ function cardClose() {
 }
 rowCode.forEach((n) => n.addEventListener("click", cardOpen));
 rowName.forEach((n) => n.addEventListener("click", cardOpen));
+rowDHName.forEach((n) => n.addEventListener("click", cardOpen));
 employeeCardBack.addEventListener("click", cardClose);
