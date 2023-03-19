@@ -271,6 +271,10 @@ button {
   border-radius: 4px;
   font-weight: 500;
 }
+.hero-section p,
+.about-section p {
+  max-width: 700px;
+}
 
 /* Animation CSS */
 .hero-section {
@@ -360,6 +364,11 @@ button {
   border-radius: 15px;
   box-shadow: var(--box-shadow);
 }
+.card-box-flex .card-box img {
+  height: 60px;
+  margin: initial;
+  margin-bottom: 1.5rem;
+}
 .card-box-flex .card-box > i {
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -369,12 +378,39 @@ button {
   margin-bottom: 0.5rem;
 }
 .card-box-flex .card-box p {
-  text-align: justify;
   margin-bottom: 1.5rem;
 }
 .card-box-flex .card-box .button:hover {
   border-color: var(--primary-color);
   color: var(--primary-color);
+}
+
+/* Distribution House Section */
+.dh-section .container-box h2 {
+  margin-bottom: 0.5rem;
+}
+.dh-section .container-box > span {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.dh-section .head-office {
+  position: relative;
+}
+.dh-section .head-office::before {
+  content: "Head Office";
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--button-color);
+  padding: 4px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  position: absolute;
+  left: -30px;
+  top: 16px;
+  transform: rotate(-45deg);
 }
 
 /* Team Section */
@@ -772,6 +808,9 @@ button {
   header nav.active li:nth-child(6) a {
     animation-delay: 0.25s;
   }
+  header nav.active li:nth-child(7) a {
+    animation-delay: 0.3s;
+  }
 }
 @media screen and (min-width: 992px) {
   .container-box {
@@ -786,5 +825,15 @@ button {
 @media screen and (min-width: 1400px) {
   .container-box {
     width: 1360px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .container-box {
+    width: 1640px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container-box {
+    width: 1920px;
   }
 }
