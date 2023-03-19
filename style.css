@@ -710,10 +710,12 @@ button {
 .employee-card .card .icon-area img {
   max-width: 40px;
 }
-.table-section, .employee-card {
+.table-section,
+.employee-card {
   display: none;
 }
-.table-section.active, .employee-card.active {
+.table-section.active,
+.employee-card.active {
   display: block;
 }
 
