@@ -594,6 +594,9 @@ button {
 .table-section #data-table tr {
   cursor: pointer;
 }
+.table-section #data-table tr:hover {
+  background-color: var(--primary-color-alt);
+}
 .table-section #data-table,
 .table-section #data-table th,
 .table-section #data-table td {
@@ -652,6 +655,24 @@ button {
 .employee-card .card {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  text-align: center;
+}
+.employee-card .card .icon-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.employee-card .card .icon-area span {
+  display: block;
+  width: 120px;
+  height: 3px;
+  background-color: var(--text-color);
+  position: relative;
+  top: 10px;
+}
+.employee-card .card .icon-area img {
+  max-width: 40px;
 }
 .table-section, .employee-card {
   display: none;
@@ -787,6 +808,9 @@ button {
   }
   header nav.active li:nth-child(5) a {
     animation-delay: 0.2s;
+  }
+  header nav.active li:nth-child(6) a {
+    animation-delay: 0.25s;
   }
 }
 @media screen and (min-width: 992px) {

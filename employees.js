@@ -45,22 +45,21 @@ const employeeCardSection = document.querySelector(".employee-card");
 const employeeCardBack = document.querySelector(
   ".employee-card .fa-chevron-left"
 );
+const rowCode = document.querySelectorAll(".row-code");
+const rowName = document.querySelectorAll(".row-name");
 const employeeImg = document.querySelector("#employee-image");
 const employeeName = document.querySelector("#employee-name");
 const employeeDesignation = document.querySelector("#employee-designation");
-const employeeInfo = document.querySelector("#employee-info");
-const employeeFacebook = document.querySelector("#facebook");
-const employeeGmail = document.querySelector("#gmail");
-const employeeWhatsapp = document.querySelector("#whatsapp");
-const employeePhone = document.querySelector("#phone");
+const employeePhone = document.querySelector("#employee-phone");
 
-rows.forEach((n) =>
-  n.addEventListener("click", function () {
-    tableSection.classList.remove("active");
-    employeeCardSection.classList.add("active");
-  })
-);
-employeeCardBack.addEventListener("click", function () {
+function cardOpen() {
+  tableSection.classList.remove("active");
+  employeeCardSection.classList.add("active");
+}
+function cardClose() {
   employeeCardSection.classList.remove("active");
   tableSection.classList.add("active");
-});
+}
+rowCode.forEach((n) => n.addEventListener("click", cardOpen));
+rowName.forEach((n) => n.addEventListener("click", cardOpen));
+employeeCardBack.addEventListener("click", cardClose);
