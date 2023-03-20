@@ -646,7 +646,8 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
-.table-section #data-table .hidden, .table-section #data-table .delete {
+.table-section #data-table .hidden,
+.table-section #data-table .delete {
   display: none;
 }
 
