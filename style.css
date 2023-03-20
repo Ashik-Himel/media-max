@@ -616,7 +616,7 @@ button {
 .table-section #data-table {
   background-color: rgba(255, 255, 255, 0.08);
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   margin-top: 0.5rem;
   text-align: center;
@@ -641,10 +641,13 @@ button {
   background-color: var(--primary-color);
   color: var(--button-color);
 }
-#data-table td img {
+.table-section #data-table td img {
   width: 50px;
   border-radius: 3px;
   cursor: pointer;
+}
+.table-section #data-table .hidden, .table-section #data-table .delete {
+  display: none;
 }
 
 /* Image Fullscreen */
@@ -682,18 +685,32 @@ button {
   max-width: 900px;
   margin: 0 auto;
 }
-.employee-card .card {
+.employee-card .card-box {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.employee-card .card .icon-area {
+.employee-card .info-box span {
+  display: inline;
+}
+.employee-card .info-box > span {
+  display: block;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+.employee-card .info-box .info-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.employee-card .card-box .icon-area {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
-.employee-card .card .icon-area span {
+.employee-card .card-box .icon-area span {
   display: block;
   width: 120px;
   height: 3px;
@@ -701,7 +718,7 @@ button {
   position: relative;
   top: 10px;
 }
-.employee-card .card .icon-area img {
+.employee-card .card-box .icon-area img {
   max-width: 40px;
 }
 .table-section,
