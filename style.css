@@ -185,11 +185,18 @@ button {
   border-color: var(--primary-color) !important;
   color: var(--button-color) !important;
 }
+.section-title {
+  margin-bottom: 0.5rem;
+}
+.after-title-text {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
 .colored-text {
   color: var(--primary-color);
-}
-#thank-body {
-  min-height: 100vh;
 }
 
 /* Header Section */
@@ -386,16 +393,6 @@ button {
 }
 
 /* Distribution House Section */
-.dh-section .container-box h2 {
-  margin-bottom: 0.5rem;
-}
-.dh-section .container-box > span {
-  display: block;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
 .dh-section .head-office {
   position: relative;
 }
@@ -414,9 +411,6 @@ button {
 }
 
 /* Team Section */
-.team-section h2 {
-  margin-bottom: 2rem;
-}
 .team-banner {
   display: flex;
   align-items: center;
@@ -581,7 +575,7 @@ button {
   width: 50px;
 }
 
-/* Thank You Seciton */
+/* Thank You Section */
 .thank-section .thank-card {
   background-color: var(--primary-color-alt);
   padding: 2rem;
@@ -627,7 +621,7 @@ button {
   margin-top: 0.5rem;
   text-align: center;
 }
-.table-section #data-table tr {
+.table-section #table-body tr {
   cursor: pointer;
 }
 .table-section #data-table tr:hover {

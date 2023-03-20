@@ -50,7 +50,7 @@ const rowName = document.querySelectorAll(".row-name");
 const rowDHName = document.querySelectorAll(".row-dh-name");
 const employeeImg = document.querySelector("#employee-image");
 const employeeName = document.querySelector("#employee-name");
-const employeeDesignation = document.querySelector("#employee-designation");
+const employeeDHName = document.querySelector("#employee-dh-name");
 const employeePhone = document.querySelector("#employee-phone");
 
 function cardOpen() {
@@ -60,7 +60,7 @@ function cardOpen() {
   employeeImg.src = this.closest("tr").querySelector(".row-img").src;
   employeeName.innerHTML =
     this.closest("tr").querySelector(".row-name").innerHTML;
-  employeeDesignation.innerHTML =
+  employeeDHName.innerHTML =
     "<span style='font-weight: 500; display: inline; font-size: 1.1rem'>Dist. House : </span>" +
     this.closest("tr").querySelector(".row-dh-name").innerHTML;
   employeePhone.href = this.closest("tr").querySelector(".row-phone").href;
