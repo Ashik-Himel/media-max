@@ -722,14 +722,6 @@ button {
 .employee-card .card-box .icon-area img {
   max-width: 40px;
 }
-.table-section,
-.employee-card {
-  display: none;
-}
-.table-section.active,
-.employee-card.active {
-  display: block;
-}
 
 /* Media Queries */
 @media screen and (max-width: 767px) {
