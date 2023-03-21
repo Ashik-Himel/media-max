@@ -63,8 +63,8 @@ const employeeBloodGroup = document.querySelector("#employee-blood-group");
 const employeePhone = document.querySelector("#employee-phone");
 
 function cardOpen() {
-  tableSection.style.display = "none";
-  employeeCardSection.style.display = "block";
+  tableSection.classList.remove("active");
+  employeeCardSection.classList.add("active");
   window.scrollTo(0, 0);
   employeeImg.src = this.closest("tr").querySelector(".row-img").src;
   employeeName.innerHTML =
@@ -91,8 +91,8 @@ function cardOpen() {
   employeePhone.href = this.closest("tr").querySelector(".row-phone").href;
 }
 function cardClose() {
-  employeeCardSection.style.display = "none";
-  tableSection.style.display = "block";
+  employeeCardSection.classList.remove("active");
+  tableSection.classList.add("active");
 }
 rowID.forEach((n) => n.addEventListener("click", cardOpen));
 rowName.forEach((n) => n.addEventListener("click", cardOpen));
