@@ -53,6 +53,7 @@ const employeeImg = document.querySelector("#employee-image");
 const employeeName = document.querySelector("#employee-name");
 const employeeDesignation = document.querySelector("#employee-designation");
 const employeeID = document.querySelector("#employee-id");
+const employeeCode = document.querySelector("#employee-code");
 const employeePhoneNumber = document.querySelector("#employee-phone-number");
 const employeeDHName = document.querySelector("#employee-dh-name");
 const employeeJobExperience = document.querySelector(
@@ -67,33 +68,73 @@ function cardOpen() {
   employeeCardSection.classList.add("active");
   window.scrollTo(0, 0);
   employeeImg.src = this.closest("tr").querySelector(".row-img").src;
-  employeeName.innerHTML =
-    this.closest("tr").querySelector(".row-name").innerHTML;
-  employeeDesignation.innerHTML =
-    this.closest("tr").querySelector(".row-designation").innerHTML;
-  employeeID.innerHTML += this.closest("tr").querySelector(".row-id").innerHTML;
-  employeePhoneNumber.innerHTML +=
-    this.closest("tr").querySelector(".row-phone").innerHTML;
-  employeeDHName.innerHTML +=
-    this.closest("tr").querySelector(".row-dh-name").innerHTML;
+  if (this.closest("tr").querySelector(".row-name").innerHTML == "") {
+    employeeName.innerHTML = "No Name";
+  } else {
+    employeeName.innerHTML =
+      this.closest("tr").querySelector(".row-name").innerHTML;
+  }
+  if (this.closest("tr").querySelector(".row-designation").innerHTML == "") {
+    employeeDesignation.innerHTML = "Employee";
+  } else {
+    employeeDesignation.innerHTML =
+      this.closest("tr").querySelector(".row-designation").innerHTML;
+  }
+  if (this.closest("tr").querySelector(".row-id").innerHTML != "") {
+    employeeID.style.display = "block";
+    employeeID.innerHTML +=
+      this.closest("tr").querySelector(".row-id").innerHTML;
+  }
+  if (this.closest("tr").querySelector(".row-code").innerHTML != "") {
+    employeeCode.style.display = "block";
+    employeeCode.innerHTML +=
+      this.closest("tr").querySelector(".row-code").innerHTML;
+  }
+  if (this.closest("tr").querySelector(".row-phone").innerHTML != "") {
+    employeePhoneNumber.style.display = "block";
+    employeePhoneNumber.innerHTML +=
+      this.closest("tr").querySelector(".row-phone").innerHTML;
+  }
+  if (this.closest("tr").querySelector(".row-dh-name").innerHTML != "") {
+    employeeDHName.style.display = "block";
+    employeeDHName.innerHTML +=
+      this.closest("tr").querySelector(".row-dh-name").innerHTML;
+  }
 
-  const joinigDate =
-    this.closest("tr").querySelector(".row-joining-date").innerHTML;
-  const expMS = new Date(new Date().getTime() - new Date(joinigDate).getTime());
-  employeeJobExperience.innerHTML += `${
-    expMS.getFullYear() - 1970
-  } Years ${expMS.getMonth()} Months`;
+  if (this.closest("tr").querySelector(".row-joining-date").innerHTML != "") {
+    employeeJobExperience.style.display = "block";
+    const joinigDate =
+      this.closest("tr").querySelector(".row-joining-date").innerHTML;
+    const expMS = new Date(
+      new Date().getTime() - new Date(joinigDate).getTime()
+    );
+    if (expMS.getFullYear() - 1970 == 0) {
+      employeeJobExperience.innerHTML += `${expMS.getMonth()} Months`;
+    } else {
+      employeeJobExperience.innerHTML += `${
+        expMS.getFullYear() - 1970
+      } Years ${expMS.getMonth()} Months`;
+    }
+  }
 
-  employeeDateOfBirth.innerHTML +=
-    this.closest("tr").querySelector(".row-date-of-birth").innerHTML;
-  employeeBloodGroup.innerHTML +=
-    this.closest("tr").querySelector(".row-blood-group").innerHTML;
+  if (this.closest("tr").querySelector(".row-date-of-birth").innerHTML != "") {
+    employeeDateOfBirth.style.display = "block";
+    employeeDateOfBirth.innerHTML +=
+      this.closest("tr").querySelector(".row-date-of-birth").innerHTML;
+  }
+  if (this.closest("tr").querySelector(".row-blood-group").innerHTML != "") {
+    employeeBloodGroup.style.display = "block";
+    employeeBloodGroup.innerHTML +=
+      this.closest("tr").querySelector(".row-blood-group").innerHTML;
+  }
   employeePhone.href = this.closest("tr").querySelector(".row-phone").href;
 }
+
 function cardClose() {
   employeeCardSection.classList.remove("active");
   tableSection.classList.add("active");
 }
+
 rowID.forEach((n) => n.addEventListener("click", cardOpen));
 rowName.forEach((n) => n.addEventListener("click", cardOpen));
 rowDesignation.forEach((n) => n.addEventListener("click", cardOpen));

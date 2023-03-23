@@ -435,16 +435,8 @@ button {
   display: block;
   margin-bottom: 1.5rem;
 }
-.team-banner p {
-  text-align: justify;
-}
-.team-banner .social-icon-box {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.team-banner .social-icon-box img {
-  max-width: 40px;
+.team-banner ul {
+  list-style-type: disc;
 }
 .team-section .card-box-img {
   position: relative;
@@ -481,6 +473,7 @@ button {
 .team-section .card-box img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 0;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
@@ -647,7 +640,7 @@ button {
   cursor: pointer;
 }
 .table-section #data-table .hidden,
-.table-section #data-table .delete {
+.table-section #data-table .deleted {
   display: none;
 }
 
@@ -695,7 +688,7 @@ button {
   display: inline;
 }
 .employee-card .info-box > span {
-  display: block;
+  display: none;
   margin-bottom: 0.3rem;
   text-align: left;
 }
