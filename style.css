@@ -544,10 +544,6 @@ button {
   text-align: center;
   padding: 2rem 0;
 }
-.footer-section .bottom-footer a {
-  color: var(--button-color) !important;
-  font-weight: 500;
-}
 
 /* Scroll To Top */
 .scroll-to-top {
